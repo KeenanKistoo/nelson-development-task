@@ -1,8 +1,11 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node'
+import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 export default function handler(req: VercelRequest, res: VercelResponse) {
-  const { name = 'World' } = req.query
+  // Get the 'data' field from the request body
+  const { data = 'example' } = req.body; 
+
+  // Return the data in a JSON response
   return res.json({
-    message: `Hello ${name}!`,
-  })
+    message: `Hello ${data}!`,
+  });
 }
