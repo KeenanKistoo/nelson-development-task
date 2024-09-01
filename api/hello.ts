@@ -9,6 +9,6 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
   
   // Return the data in a JSON response
   return res.json({
-    message: finalResponse,
+    word: finalResponse,
   });
 }
